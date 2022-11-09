@@ -90,8 +90,8 @@ async def main():
     t2 = asyncio.create_task(file_created_check(path,current_files))
     t3 = asyncio.create_task(file_moved_or_deleted_check(path,current_files))
     
-    tasks.append(t2)
     tasks.append(t1)
+    tasks.append(t2)
     tasks.append(t3)
     
     await asyncio.gather(*tasks)
