@@ -73,7 +73,8 @@ async def main():
     current_folders = []
     tasks = []
     
-    path = input("Yol giriniz: ")
+    path = input("Path: ")
+
 
     os.chdir(path)
     
